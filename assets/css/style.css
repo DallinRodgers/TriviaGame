@@ -20,14 +20,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   margin: 5rem 2rem;
   min-height: 40rem;
   background: #fff;
+  font-size: 2.5rem;
   /* position: relative; */
 }
 h1 {
   font-size: 7rem;
+  padding: 5rem 2rem;
 }
 .start-game {
   font-size: 3.5rem;
