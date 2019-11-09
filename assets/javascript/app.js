@@ -30,4 +30,6 @@ $(".start-game").on("click", function() {
       timeLeft--;
     }
   }
+  $(".start-game").css("display", "none");
+  $(".game-content").css("display", "block");
 });
