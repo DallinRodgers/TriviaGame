@@ -41,8 +41,15 @@ label {
   font-size: 2.5rem;
   /* position: relative; */
 }
+.padding-bottom {
+  padding-bottom: 2rem;
+}
+.center {
+  text-align: center;
+}
 .game-content {
-  padding: 3rem 1.5rem;
+  padding: 1.5rem;
+  display: none;
 }
 .question {
   width: 90%;
