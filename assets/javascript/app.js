@@ -1,21 +1,12 @@
-// var timeLeft = 10;
-// var elem = document.querySelector(".time");
-
-// // var timerId = setInterval(countdown, 1000);
-
-// function countdown() {
-//   if (timeLeft == 0) {
-//     elem.innerHTML = timeLeft;
-//     clearTimeout(timerId);
-//     doSomething();
-//   } else {
-//     elem.innerHTML = timeLeft;
-//     timeLeft--;
-//   }
-// }
+var correct = 0;
+var incorrect = 0;
 
 $(".start-game").on("click", function() {
   var timeLeft = 30;
+  var none = "none";
+  var block = "block";
+  var start = ".start-game";
+  var game = ".game-content";
   var elem = document.querySelector(".time");
 
   var timerId = setInterval(countdown, 1000);
@@ -25,19 +16,17 @@ $(".start-game").on("click", function() {
       elem.innerHTML = timeLeft;
       clearTimeout(timerId);
       getScore();
+      toggleGame(game, none);
     } else {
       elem.innerHTML = timeLeft;
       timeLeft--;
     }
   }
-  $(".start-game").css("display", "none");
-  $(".game-content").css("display", "block");
+  toggleGame(start, none);
+  toggleGame(game, block);
 });
 
 function getScore() {
-  var correct = 0;
-  var incorrect = 0;
-
   checkAnswers();
 
   function checkAnswers() {
@@ -52,4 +41,8 @@ function getScore() {
       }
     }
   }
+}
+
+function toggleGame(element, display) {
+  $(element).css("display", display);
 }
