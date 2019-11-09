@@ -15,7 +15,7 @@
 // }
 
 $(".start-game").on("click", function() {
-  var timeLeft = 10;
+  var timeLeft = 30;
   var elem = document.querySelector(".time");
 
   var timerId = setInterval(countdown, 1000);
