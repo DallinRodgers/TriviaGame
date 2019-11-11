@@ -79,3 +79,6 @@ label {
 .remaining {
   display: none;
 }
+.results {
+  display: none;
+}
