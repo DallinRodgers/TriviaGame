@@ -2,11 +2,12 @@ var correct = 0;
 var incorrect = 0;
 
 $(".start-game").on("click", function() {
-  var timeLeft = 30;
+  var timeLeft = 29;
   var none = "none";
   var block = "block";
   var start = ".start-game";
   var game = ".game-content";
+  var timeRemaining = ".remaining";
   var elem = document.querySelector(".time");
 
   var timerId = setInterval(countdown, 1000);
@@ -22,7 +23,9 @@ $(".start-game").on("click", function() {
       timeLeft--;
     }
   }
+
   toggleGame(start, none);
+  toggleGame(timeRemaining, block);
   toggleGame(game, block);
 });
 
