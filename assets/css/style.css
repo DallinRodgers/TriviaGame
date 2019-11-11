@@ -76,3 +76,6 @@ label {
   background: rgb(150, 150, 150);
   color: #b5fffc;
 }
+.remaining {
+  display: none;
+}
