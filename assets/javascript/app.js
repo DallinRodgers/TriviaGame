@@ -1,10 +1,10 @@
 var correct = 0;
 var incorrect = 0;
+var none = "none";
+var block = "block";
 
 $(".start-game").on("click", function() {
   var timeLeft = 29;
-  var none = "none";
-  var block = "block";
   var start = ".start-game";
   var game = ".game-content";
   var timeRemaining = ".remaining";
@@ -18,6 +18,7 @@ $(".start-game").on("click", function() {
       clearTimeout(timerId);
       getScore();
       toggleGame(game, none);
+      displayScores();
     } else {
       elem.innerHTML = timeLeft;
       timeLeft--;
@@ -48,4 +49,15 @@ function getScore() {
 
 function toggleGame(element, display) {
   $(element).css("display", display);
+}
+
+function displayScores() {
+  var correctCount = $("#correctCount");
+  var incorrectCount = $("#incorrectCount");
+  var results = ".results";
+
+  correctCount.text(correct);
+  incorrectCount.text(incorrect);
+
+  toggleGame(results, block);
 }
